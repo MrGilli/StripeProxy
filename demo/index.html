@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     	<title>StripeSearch | Proxy</title>
+      <script defer src="page.js"></script>
+    </head>
+    <body>
+	<div class="content-body"><br><br><br><br>
+		<a href="#"><img src="https://i.ibb.co/HGv8nHr/stripeproxy.png" alt="stripeproxy" width="35%" height="35%" border="0"></a><br>
+    <input id="url" name="url" placeholder="Proxy the web...">           	 	
+    <input id="go" type="submit" value="Go">
+	</div><br><br>
+	<h2>StripeSearch Proxy is built on this<a href="https://github.com/titaniumnetwork-dev/Corrosion" style="color: #5064F2;"> Amazing Engine</a>.</h2><br>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+	body{
+		text-align: center;
+		color: white;
+		margin-top: 90px;
+		margin-left: 40px;
+		margin-right: 40px;
+		font-family: 'Roboto', sans-serif;
+    background-color: #181B25;
+	}
+	#url{
+		width: 55%;
+		padding: 10px 15px;
+		border: 1px solid white;
+		border-radius: 4px;
+		margin: 0 auto;
+    background-color: white;
+    color: black;
+	}
+	#btn{
+		border: 1px solid black;
+		padding: 5px 15px;
+		background-color: black;
+		color: white;
+	}
+	ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #333;
+	}
+
+	li {	
+	  float: left;
+	}
+
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+
+	/* Change the link color to #111 (black) on hover */
+	li a:hover {
+	  background-color: #111;
+	}
+  #go{
+    border: 1px solid #5064f2;
+    background-color: #5064F2;
+    padding: 10px 10px;
+    color: white;
+    border-radius: 4px;
+  }
+	</style>
+      <script>
+    			function xor(str) {
+    				return encodeURIComponent(str.toString().split('').map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char).join(''));
+    			}
+    			
+    			var prUrl = document.getElementById("url"),
+    			prGo = document.getElementById("go");
+    			
+    			function go(url) {
+    				window.location.href = "c/" + xor(/^(http:\/\/|https:\/\/)/i.test(url) ? url : "https://" + url);
+    			}
+    			
+    			prUrl.addEventListener("keydown", function(e) {
+    				if (e.code == "Enter" && prUrl.value) go(prUrl.value);
+    			}, false);
+    			
+    			prGo.addEventListener("click", function() {
+    				if (prUrl.value) go(prUrl.value);
+    			}, false);
+		</script>
+    </body>
+</html>
