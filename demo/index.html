@@ -16,6 +16,7 @@
     		<input id="url" name="url" placeholder="Proxy the web...">           	 	
     		<input id="go" type="submit" value="Go">
 	</div><br><br>
+	    <button onclick="google_search()" id="go">Google Search</button>
 	<div class="terms" style="width: 600px; margin: 0 auto; text-align: left;">
 		<h2 style="color: #5064f2; text-decoration: underline;">Term's Of Use</h2><br>
 		<p style="">StripeProxy will not be held accountable for it's users actions.</p>
@@ -89,6 +90,11 @@
 		
 	</style>
       <script>
+	      	function google_search() {
+		  var google_new_session = true
+		  window.open('_self', "https://web-production-d7da.up.railway.app/c/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F/")
+		}
+
     			function xor(str) {
     				return encodeURIComponent(str.toString().split('').map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char).join(''));
     			}
