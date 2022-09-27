@@ -1,118 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-     	    <title>StripeSearch | Proxy</title>
-      	    <script defer src="page.js"></script>
-	    <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    </head>
-    <body>
-	    <!-- Google Tag Manager (noscript) -->
-	    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW76XX9"
-	    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	    <!-- End Google Tag Manager (noscript) -->
-	    
-	<div class="content-body"><br><br><br><br>
-		<h1 style="font-size: 70px; text-decoration: underline;">Stripe.</h1>
-    		<input id="url" name="url" placeholder="Proxy the web...">           	 	
-    		<input id="go" type="submit" value="Go">
-	</div><br><br>
-	    <button onclick="google_search()" id="go">Google Search</button>
-	<div class="terms" style="width: 600px; margin: 0 auto; text-align: left;">
-		<h2 style="color: #5064f2; text-decoration: underline;">Term's Of Use</h2><br>
-		<p style="">StripeProxy will not be held accountable for it's users actions.</p>
-		<p style="">What you use our service for is your responsibility.</p>
-		<p style="">StripeProxy was a project made to improve skills and was "NOT" intended to go against policies.</p>
-		<p style="">Thanks once again for using our service.</p>
-		<p style="">Check out our <a style="color: #5064f2;"href="https://github.com/SickLer4Life/StripeProxy">GitHub</a>!</p>
-		<h2>Join our <a style="color: #5064F2;" href="https://discord.gg/mxkvu8vB">Discord</a></h2>
-	</div><br>
-	<style>
-	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-	body{
-		text-align: center;
-		color: white;
-		margin-top: 50px;
-		margin-left: 40px;
-		margin-right: 40px;
-		font-family: 'Roboto', sans-serif;
-    		background-color: #181B25;
-	}
-	#url{
-		width: 38%;
-		padding: 12px 15px;
-		border: 2px solid #6573FF;
-		border-radius: 10px;
-		margin: 0 auto;
-    		background-color: white;
-    		color: black;
-	}
-	#btn{
-		border: 1px solid black;
-		padding: 5px 15px;
-		background-color: black;
-		color: white;
-	}
-	ul {
-	  list-style-type: none;
-	  margin: 0;
-	  padding: 0;
-	  overflow: hidden;
-	  background-color: #333;
-	}
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div style="margin-top: 40px;">
+      <img src="proxylogo.png" alt="" width="45%" height="45%"><br><br>
+      <input type="text" id="url" name="url" placeholder="Search Unblocked (discord.com)...." autofocus>
+      <input id="go" type="submit" value="Go">
+    </div>
+    <div>
 
-	li {	
-	  float: left;
-	}
+    </div>
+    <style media="screen">
+      body{
+        text-align: center;
+      }
+      #url{
+        color: white;
+        font-size: 20px;
+        width: 550px;
+        height: 20px;
+        padding: 15px 15px;
+        background-color: #333333;
+        border: 1px solid #333333;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+        -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+      }
+      #url::placeholder{
+        color: white;
+      }
+      #go{
+        border: 1px solid #333333;
+        background-color: #333333;
+        width: 50px;
+        height: 50px;
+        color: white;
+        border-radius: 4px;
+        position: relative;
+        bottom: 2px;
+      }
 
-	li a {
-	  display: block;
-	  color: white;
-	  text-align: center;
-	  padding: 14px 16px;
-	  text-decoration: none;
-	}
+    </style>
+    <script>
+      function google_search() {
+        var google_new_session = true
+        window.open('https://web-production-d7da.up.railway.app/c/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F/', "_self")
+      }
 
-	/* Change the link color to #111 (black) on hover */
-	li a:hover {
-	  background-color: #111;
-	}
-	  #go{
-	    border: 1px solid #5064f2;
-	    background-color: #5064F2;
-	    padding: 10px 10px;
-	    color: white;
-	    border-radius: 4px;
-	  }
-	h1 {
-	  font-size: 400px;
-	  color: white;
-	}
-		
-	</style>
-      <script>
-	      	function google_search() {
-		  var google_new_session = true
-		  window.open('https://web-production-d7da.up.railway.app/c/hvtrs8%2F-wuw%2Cgmoelg.aoo%2F/', "_self")
-		}
-
-    			function xor(str) {
-    				return encodeURIComponent(str.toString().split('').map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char).join(''));
-    			}
-    			
-    			var prUrl = document.getElementById("url"),
-    			prGo = document.getElementById("go");
-    			
-    			function go(url) {
-    				window.location.href = "c/" + xor(/^(http:\/\/|https:\/\/)/i.test(url) ? url : "https://" + url);
-    			}
-    			
-    			prUrl.addEventListener("keydown", function(e) {
-    				if (e.code == "Enter" && prUrl.value) go(prUrl.value);
-    			}, false);
-    			
-    			prGo.addEventListener("click", function() {
-    				if (prUrl.value) go(prUrl.value);
-    			}, false);
-		</script>
-    </body>
+            function xor(str) {
+              return encodeURIComponent(str.toString().split('').map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char).join(''));
+            }
+            
+            var prUrl = document.getElementById("url"),
+            prGo = document.getElementById("go");
+            
+            function go(url) {
+              window.location.href = "c/" + xor(/^(http:\/\/|https:\/\/)/i.test(url) ? url : "https://" + url);
+            }
+            
+            prUrl.addEventListener("keydown", function(e) {
+              if (e.code == "Enter" && prUrl.value) go(prUrl.value);
+            }, false);
+            
+            prGo.addEventListener("click", function() {
+              if (prUrl.value) go(prUrl.value);
+            }, false);
+      </script>
+  </body>
 </html>
