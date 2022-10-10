@@ -11,16 +11,35 @@
       <input type="text" id="url" name="url" placeholder="Search Unblocked (reddit.com, instagram.com)...." autofocus>
       <input id="go" type="submit" value="Go">
     </div><br><br>
-    <div>
-      <a style="color: blue; margin-left: 10px;" href="">Guides</a>
-      <a style="color: blue; margin-left: 10px;" href="">Term's Of Use</a>
-      <a style="color: blue; margin-left: 10px;" href="">Updates/Social</a>
+    <div class="quick-links">
+      <div class="link">
+          <a href="https://web-production-d7da.up.railway.app/c/hvtrs8%2F-wuw%2Crgdfiv.aoo%2F/"><img src="https://static.vecteezy.com/system/resources/previews/008/385/797/original/reddit-social-media-icon-abstract-logo-design-illustration-free-vector.jpg" alt="" width="60%" height="65%" style="margin-top: 15px;"></a>
+      </div>
+      <div class="link">
+          <a href="https://web-production-d7da.up.railway.app/c/hvtrs8%2F-wuw%2Cilsvaercm%2Ccmm-/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="" srcset="" width="50%" height="65%" style="margin-top: 15px;"></a>
+      </div>
+      <div class="link">
+          <a href="https://web-production-d7da.up.railway.app/c/hvtrs8%2F-dksaopd%2Ccmm"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3xKsVMoo2EGGk6x57P8c8tuT42a3F7AQcHRffg-JBML6USYEIuWhS02VKezJ4U6aDQqU&usqp=CAU" alt="" srcset="" width="50%" height="65%" style="margin-top: 15px;"></a>
+      </div>
+      <div class="link">
+          <a href="https://web-production-d7da.up.railway.app/c/hvtrs8%2F-tuivtgr%2Ccmm"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/934px-Twitter-logo.svg.png" alt="" width="50%" height="65%" style="margin-top: 15px;"></a>
+      </div>
     </div>
     <style media="screen">
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Space+Mono&display=swap');
       body{
         text-align: center;
         font-family: 'Space Mono', monospace;
+      }
+      .quick-links {
+        width: 550px;
+        height: max-content;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
       }
       #url{
         color: white;
@@ -50,7 +69,13 @@
         position: relative;
         bottom: 2px;
       }
-
+      .link {
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 250px;
+        height: 90px;
+        margin-left: 10px;
+      }
     </style>
     <script>
       function google_search() {
